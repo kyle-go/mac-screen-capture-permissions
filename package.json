@@ -1,6 +1,6 @@
 {
   "name": "mac-screen-capture-permissions2",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Check and request permission to capture the screen",
   "main": "index.js",
   "repository": "https://github.com/karaggeorge/mac-screen-capture-permissions",
