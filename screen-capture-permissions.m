@@ -2,6 +2,8 @@
 #import <Foundation/Foundation.h>
 #include <node_api.h>
 
+CG_EXTERN bool CGPreflightScreenCaptureAccess(void) CG_AVAILABLE_STARTING(10.15);
+
 static napi_value hasPermissions(napi_env env, napi_callback_info info) {
   napi_status status;
   bool hasPermissions;
