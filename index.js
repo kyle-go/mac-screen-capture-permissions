@@ -1,7 +1,7 @@
 'use strict';
 const path = require('path');
 const fs = require('fs');
-const execa = require('execa');
+import {execaSync} from 'execa';
 const {isElectron} = require('electron-util/node');
 const macosVersion = require('macos-version');
 
@@ -55,7 +55,7 @@ exports.hasPromptedForPermission = () => {
 
 exports.resetPermissions = ({bundleId = ''} = {}) => {
 	try {
-		execa.sync('tccutil', ['reset', 'ScreenCapture', bundleId].filter(Boolean));
+		execaSync('tccutil', ['reset', 'ScreenCapture', bundleId].filter(Boolean));
 
 		if (filePath && fs.existsSync(filePath)) {
 			fs.unlinkSync(filePath);
